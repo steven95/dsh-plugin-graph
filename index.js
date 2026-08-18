@@ -133,9 +133,10 @@ export function apply(ctx) {
     },
   }))
 
-  // ---------- UI 面板（可选） ----------
-  if (ctx.ui && typeof ctx.ui.registerPanel === 'function') {
-    ctx.ui.registerPanel('plugin-graph', {
+  // ---------- UI 面板（可选，ui 服务未注入时安全跳过） ----------
+  const ui = ctx.reflect.get('ui', false)
+  if (ui && typeof ui.registerPanel === 'function') {
+    ui.registerPanel('plugin-graph', {
       title: 'Plugin Graph',
       description: '插件依赖图与冲突检测',
       commands: ['plugin graph', 'plugin check'],
@@ -144,6 +145,9 @@ export function apply(ctx) {
 
   return api
 }
+
+// tools 服务需通过 inject 声明注入，cordis 在 apply 执行前读取该声明
+apply.inject = ['tools']
 
 /** 渲染安装预检报告（文本） */
 function renderPreflight(result) {

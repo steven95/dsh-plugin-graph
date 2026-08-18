@@ -1,11 +1,20 @@
 {
   "name": "dsh-plugin-graph-engine",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DSH 生态级基建：插件依赖图与冲突检测引擎（缺失依赖/循环依赖/工具冲突/服务冲突/管道拦截重叠）",
   "type": "module",
   "main": "index.js",
-  "bin": { "dsh-plugin-graph": "./bin/plugin-graph.js" },
-  "files": ["index.js", "lib", "bin", "cordis.patch.yml", "README.md", "LICENSE"],
+  "bin": {
+    "dsh-plugin-graph": "./bin/plugin-graph.js"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "bin",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "dsh",
     "deepseek-harness",
@@ -15,15 +24,23 @@
     "conflict-detection",
     "plugin-manager"
   ],
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "author": "ios-SDF <1345266022@qq.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/steven95/dsh-plugin-graph.git"
   },
   "homepage": "https://github.com/steven95/dsh-plugin-graph",
-  "bugs": { "url": "https://github.com/steven95/dsh-plugin-graph/issues" },
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "bugs": {
+    "url": "https://github.com/steven95/dsh-plugin-graph/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
   "peerDependencies": {
     "@deepseek-ai/cordis": "*",
     "@deepseek-ai/dsh-tools": "*"
