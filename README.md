@@ -1,4 +1,4 @@
-# dsh-plugin-graph
+# dsh-plugin-graph-engine
 
 DSH（DeepSeek-Harness）生态级基建插件：**插件依赖图与冲突检测引擎**。
 
@@ -45,7 +45,7 @@ dsh-plugin-graph compat <dir> <dshVersion> [--json]
 
 ```yaml
 # .github/workflows/plugin-check.yml
-- run: npm install -g dsh-plugin-graph
+- run: npm install -g dsh-plugin-graph-engine
 - run: dsh-plugin-graph check ./plugins --json
 ```
 

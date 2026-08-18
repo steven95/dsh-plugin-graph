@@ -1,5 +1,5 @@
 {
-  "name": "dsh-plugin-graph",
+  "name": "dsh-plugin-graph-engine",
   "version": "0.1.0",
   "description": "DSH 生态级基建：插件依赖图与冲突检测引擎（缺失依赖/循环依赖/工具冲突/服务冲突/管道拦截重叠）",
   "type": "module",
