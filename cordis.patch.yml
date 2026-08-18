@@ -1,0 +1,4 @@
+# dsh-plugin-graph bundle 声明
+- insert:
+    - id: plugin-graph
+      name: dsh-plugin-graph
